@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 
 wb =  webdriver.Chrome()
 wb.get("http://www.baidu.com")
-
+wb.implicitly_wait(5)
 wb.find_element_by_id("kw").send_keys("selenium")
 sub = wb.find_element_by_id("kw").send_keys(Keys.BACK_SPACE)
 ActionChains(wb).context_click(sub).perform()
@@ -27,3 +27,7 @@ ActionChains(wb).double_click(sub1).perform()
 # 5. send_keys(Keys.ENTER)回车键（Enter） 
 # 6. send_keys(Keys.CONTROL,'a') 全选（Ctrl+A） 
 # 7. send_keys(Keys.CONTROL,'c')复制（Ctrl+C）
+
+wb.find_element_by_id("su").send_keys(Keys.ENTER)
+wb.find_element_by_id("kw").send_keys(Keys.CONTROL,"a")
+wb.find_element_by_id("kw").send_keys(Keys.CONTROL,"c")
