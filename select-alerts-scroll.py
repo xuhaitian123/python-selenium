@@ -28,12 +28,12 @@ alert.accept()
 # alert.dismiss()
 
 # 以W3C的confim为例
-js='window.open("https://www.w3school.com.cn/tiy/t.asp?f=hdom_confirm");'
-w.execute_script(js)
+# js='window.open("https://www.w3school.com.cn/tiy/t.asp?f=hdom_confirm");'
+# w.execute_script(js)
+
+w.get("https://www.w3school.com.cn/tiy/t.asp?f=hdom_confirm")
 w.switch_to_frame("iframeResult")
 w.find_element_by_xpath("//input[@type='button']").click()
-
-
 
 alert = w.switch_to_alert()
 time.sleep(2)
