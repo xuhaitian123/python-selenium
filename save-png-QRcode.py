@@ -10,8 +10,9 @@ w.maximize_window()
 ipt = w.find_element_by_id("kw")
 ipt.send_keys("1111")
 time.sleep(1)
-# w.get_screenshot_as_file(u"../image/test.png")
-filename =  "D:\\testclass.png"
+# 路径可以使用以下两种方法
+# filename =  "D:\\testclass.png"
+filename  =  "D:/rom_package/4-30/test.png"
 try:
     picture=w.get_screenshot_as_file(filename)  
     print(picture)
@@ -26,3 +27,4 @@ print (os.getcwd())#获得当前工作目录
 print (os.path.abspath('.'))#获得当前工作目录
 print (os.path.abspath('..'))#获得当前工作目录的父目录
 print (os.path.abspath(os.curdir))#获得当前工作目录
+
